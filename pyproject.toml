@@ -1,0 +1,18 @@
+[project]
+name = "french-english-summary-generation"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "datasets>=4.3.0",
+    "requests>=2.32.5",
+]
+
+[dependency-groups]
+dev = [
+    "bpython>=0.26",
+    "ipykernel>=7.1.0",
+    "ipywidgets>=8.1.8",
+    "uv>=0.9.7",
+]
