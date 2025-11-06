@@ -1,5 +1,14 @@
-# Création de classes
+# STL
 from dataclasses import dataclass
+import html
+import re
+from typing import Any
+import unicodedata
+
+# Rich display in console
+from rich import print
+from rich.console import Console
+from rich.table import Table
 
 # Manipulation de données
 from datasets import load_dataset, Dataset, DatasetDict

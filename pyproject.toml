@@ -9,6 +9,7 @@ dependencies = [
     "fsspec>=2025.3.0",
     "huggingface-hub>=1.0.1",
     "requests>=2.32.5",
+    "rich>=14.2.0",
     "scikit-learn>=1.7.2",
 ]
 
