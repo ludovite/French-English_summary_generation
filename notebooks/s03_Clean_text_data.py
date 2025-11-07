@@ -99,3 +99,14 @@ def verify_cleaning(dataset: Dataset, num_examples: int = 5) -> None:
             console.print(f"FR: {fr_text}")
 
         console.print("⎯" * 40)
+
+
+##############################################################
+
+from s02_Split_dataset import ds
+
+
+cleaner = TextCleaner()
+ds_train = clean_dataset(ds['train'], cleaner)
+ds_val = clean_dataset(ds['valid'], cleaner)
+ds_test = clean_dataset(ds['test'], cleaner)
