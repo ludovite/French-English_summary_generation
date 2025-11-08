@@ -99,3 +99,18 @@ def display_random_samples(dataset: Dataset,
         console.print(f"[green]EN[/green]:", en_text)
         console.print(f"[green]FR[/green]:", fr_text)
         console.print(f"⎯" * 40)
+
+
+####################################################################
+
+from s03_Clean_text_data import (
+    ds_train,
+    ds_val,
+    ds_test,
+)
+
+
+flength = FilterLength()
+ds_train = ds_train.filter(flength.filter_length)
+ds_val = ds_val.filter(flength.filter_length)
+# Not applied on ds_test to avoid biasing the evaluation
