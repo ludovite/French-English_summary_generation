@@ -4,7 +4,8 @@ from dataclasses import dataclass
 import html
 import random
 import re
-from typing import Any
+import string
+from typing import Any, Iterable
 import unicodedata
 
 # Rich display in console
