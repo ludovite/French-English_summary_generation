@@ -12,3 +12,6 @@ wheels/
 # Jupyter files
 .ipynb_checkpoints/
 .virtual_documents/
+
+# Model folder (can exceed 100MB, GitHub limitation)
+model/
