@@ -19,13 +19,16 @@ from rich.table import Table
 from datasets import load_dataset, Dataset, DatasetDict
 import numpy as np
 from sklearn.model_selection import train_test_split
+import torch
+from torch.utils.data import DataLoader
 from transformers import (
+    BatchEncoding,
+    DataCollatorForSeq2Seq,
+    EarlyStoppingCallback,
     MarianMTModel,
     MarianTokenizer,
     Trainer,
     TrainingArguments,
-    DataCollatorForSeq2Seq,
-    EarlyStoppingCallback,
 )
 
 # Spécifique à Jupyter
