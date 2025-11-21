@@ -13,5 +13,6 @@ wheels/
 .ipynb_checkpoints/
 .virtual_documents/
 
-# Model folder (can exceed 100MB, GitHub limitation)
+# Trained model folders (can exceed 100MB, GitHub limitation)
 model/
+results/

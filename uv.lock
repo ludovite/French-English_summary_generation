@@ -215,29 +215,6 @@ wheels = [
 ]
 
 [[package]]
-name = "catppuccin"
-version = "2.5.0"
-source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/b6/31/87c3ca25d29678e076e1f0d151ef8792f0557b26a8dc865035b5f1fa96c4/catppuccin-2.5.0.tar.gz", hash = "sha256:3035f3bf35bc2369d1cb4c754272a494708592a1e62d42655a371863ac7c6834", size = 1918017, upload-time = "2025-08-03T20:06:40.089Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/c8/9c/7908f34009eec72884fe9448a62188423a3621f04ee58e2abaec379c9cc0/catppuccin-2.5.0-py3-none-any.whl", hash = "sha256:74a1f1db79d527905225f1afce1c8858d06e2dd1231e4300a72a812797cdb572", size = 19600, upload-time = "2025-08-03T20:06:38.912Z" },
-]
-
-[package.optional-dependencies]
-pygments = [
-    { name = "pygments" },
-]
-
-[[package]]
-name = "catppuccin-jupyterlab"
-version = "0.2.4"
-source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/d9/be/6d273956a87b542ad3e3e7def265ff564308059c4d15917808c9526ba341/catppuccin_jupyterlab-0.2.4.tar.gz", hash = "sha256:6bdb0129c220296b81b8ef82e29c61b8213c13a82a86849d8ded2b41f9a29024", size = 1185233, upload-time = "2024-08-15T12:46:03.591Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/0e/da/a844d1c2962342ba0743aa699b67bbe373511cafae5269a3d907ad73418b/catppuccin_jupyterlab-0.2.4-py3-none-any.whl", hash = "sha256:643839b1c46e93e497beb95e741d40dd585fc4e489a44c2c6ce89a869a9cef67", size = 21720, upload-time = "2024-08-15T12:45:57.362Z" },
-]
-
-[[package]]
 name = "certifi"
 version = "2025.10.5"
 source = { registry = "https://pypi.org/simple" }
@@ -587,10 +564,9 @@ dependencies = [
 [package.dev-dependencies]
 dev = [
     { name = "bpython" },
-    { name = "catppuccin", extra = ["pygments"] },
-    { name = "catppuccin-jupyterlab" },
     { name = "ipykernel" },
     { name = "ipywidgets" },
+    { name = "jupyterlab-pygments" },
     { name = "uv" },
 ]
 
@@ -611,10 +587,9 @@ requires-dist = [
 [package.metadata.requires-dev]
 dev = [
     { name = "bpython", specifier = ">=0.26" },
-    { name = "catppuccin", extras = ["pygments"], specifier = ">=2.5.0" },
-    { name = "catppuccin-jupyterlab", specifier = ">=0.2.4" },
     { name = "ipykernel", specifier = ">=7.1.0" },
     { name = "ipywidgets", specifier = ">=8.1.8" },
+    { name = "jupyterlab-pygments", specifier = ">=0.3.0" },
     { name = "uv", specifier = ">=0.9.7" },
 ]
 
@@ -990,6 +965,15 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/02/49/9d1284d0dc65e2c757b74c6687b6d319b02f822ad039e5c512df9194d9dd/jupyter_core-5.9.1.tar.gz", hash = "sha256:4d09aaff303b9566c3ce657f580bd089ff5c91f5f89cf7d8846c3cdf465b5508", size = 89814, upload-time = "2025-10-16T19:19:18.444Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/e7/e7/80988e32bf6f73919a113473a604f5a8f09094de312b9d52b79c2df7612b/jupyter_core-5.9.1-py3-none-any.whl", hash = "sha256:ebf87fdc6073d142e114c72c9e29a9d7ca03fad818c5d300ce2adc1fb0743407", size = 29032, upload-time = "2025-10-16T19:19:16.783Z" },
+]
+
+[[package]]
+name = "jupyterlab-pygments"
+version = "0.3.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/90/51/9187be60d989df97f5f0aba133fa54e7300f17616e065d1ada7d7646b6d6/jupyterlab_pygments-0.3.0.tar.gz", hash = "sha256:721aca4d9029252b11cfa9d185e5b5af4d54772bb8072f9b7036f4170054d35d", size = 512900, upload-time = "2023-11-23T09:26:37.44Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/b1/dd/ead9d8ea85bf202d90cc513b533f9c363121c7792674f78e0d8a854b63b4/jupyterlab_pygments-0.3.0-py3-none-any.whl", hash = "sha256:841a89020971da1d8693f1a99997aefc5dc424bb1b251fd6322462a1b8842780", size = 15884, upload-time = "2023-11-23T09:26:34.325Z" },
 ]
 
 [[package]]

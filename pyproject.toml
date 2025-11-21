@@ -20,9 +20,8 @@ dependencies = [
 [dependency-groups]
 dev = [
     "bpython>=0.26",
-    "catppuccin-jupyterlab>=0.2.4",
-    "catppuccin[pygments]>=2.5.0",
     "ipykernel>=7.1.0",
     "ipywidgets>=8.1.8",
+    "jupyterlab-pygments>=0.3.0",
     "uv>=0.9.7",
 ]
