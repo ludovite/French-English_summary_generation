@@ -10,5 +10,9 @@ wheels/
 .venv
 
 # Jupyter files
-.ipynb_checkpoints
-.virtual_documents
+.ipynb_checkpoints/
+.virtual_documents/
+
+# Trained model folders (can exceed 100MB, GitHub limitation)
+model/
+results/
