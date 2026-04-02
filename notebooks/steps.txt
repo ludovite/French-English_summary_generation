@@ -1,0 +1,110 @@
+In this video, we will delve into the technical heart of the project, fine-tuning the M-BART model on a multi-lingual
+
+corpus. The objective was simple to adapt the Facebook/M-BART large 50 model so that
+
+it could effectively summarize text and English and French and a fluid, concise and relevant manner.
+
+In step one, we install and import all the libraries needed for the project. Data sets for loading, manipulating,
+
+and pre-processing NLP data sets. Transformers for accessing the Bart model in its tokenization tools.
+
+Avaluate and RUJScore for automatically measuring the quality of the summaries produced. A found for
+
+correcting encoding errors and raw texts. We also set up Google Drive via Colab. to permanently save
+
+the train model, it's weights, results, and temporary files, ensuring an operational environment that is ready to
+
+accommodate all phases of the project.
+
+In step 2, we download two data sets specialized in automatic summarization, Edinburgh NLP/X
+
+sum, a corpus of very short summaries extracted from BBC articles, a single sentence condensing the entire
+
+article, and ML sum, a multilingual corpus of journalistic summaries from which we select the French
+
+version, usually several sentences. Each data set structure differently hence the need to harmonize them in the following
+
+steps.
+
+In Step 3, we adapt the structure of the two data sets so that they share homogeneous columns.
+
+We rename the main columns to unify them and add a Langdad column specifying the language of each example, which is crucial
+
+information for guiding the multi-lingual tokenizer on-bar. This standardization ensures that
+
+the two data sets are compatible for concatenation.
+
+And step 4 we combine the English and French data into a single-balanced bilingual corpus. We can catenate all
+
+the splits, train, validation, test, for each language. Apply random sampling limiting
+
+each language to a maximum of 50,000-day examples. And then merge the two subsets into a final data set.
+
+This choice allows us to control the size of the corpus for effective fine-tuning, while maintaining linguistic and thematic diversity.
+
+Instead, we apply the FTFY.Fix Text function
+
+to correct common encoding errors and data sets collected from the web. Invalid characters, accents, or misinterpreted
+
+special symbols, we then calculate a badness-shoot score for each example to verify the readability
+
+and cleanliness of the clean text.
+
+In Step 6, we use regular expressions to remove any irrelevant elements. HTML tags,
+
+email addresses, and URL links, multiple spaces, and unnecessary white space.
+
+This operation aims to provide the model with input that is free of technical noise or web pollution.
+
+In step 7, we harmonize the punctuation and type a graphical structure of the text. Removal of spaces
+
+before punctuation marks, systematic addition of a space after each mark, and removal of repeated punctuation.
+
+This formal consistency prevents subsequent tokenization errors.
+
+In Step 8, we apply a series of filters to ensure the logical quality of the text in summary pairs.
+
+Explicit conversion of all fields to character strings, removal of empty or corrupted examples, removal
+
+of cases where the text in summary are identical. In exclusion of summaries that are longer than their source text,
+
+non-compliant examples are removed from the final data set.
+
+In step 9, we tokenize each example with the M-BART 50 tokenizer fast. Each text in
+
+summary is converted into token identifiers, inputted. The language of the example is taken into
+
+account via the Langtack field, and the sequences are truncated to 5-9-12 tokens for the text, and 128
+
+for the summary. The data collator for SecU-2's Food and Dinner and Dree on David and Dirt the Intubious SecU
+
+manages dynamic padding with an each batch.
+
+In Step 10, we launch fine tuning of the Facebook/M Bart Large 50 model on our clean bilingual
+
+data set using SecU2 SecU trainer, split 90% training get right 10% validation, several
+
+epics with a valaus tracking. Early stopping a performance no longer improves, FE16 to speed up calculations
+
+on compatible GPUs and gradient accumulation to simulate a larger batch size.
+
+In step 11, we save the fine-tune model in its tokenizer with save-pre-trained in a Google drive folder,
+
+which allows us to easily reload it via fromper-trained, deploy it in other applications without retraining and
+
+share or archive the work done.
+
+In step 12, we evaluate the quality of the generated summaries, quantitatively with Rouge metrics,
+
+Rouge 1, Rouge 2, Rouge L on the validation set and qualitatively by generating summaries
+
+on a subset of examples with controlled parameters, Numbemes, length penalty, temperature, etc.,
+
+in order to judge the models' performance, both in terms of figures and concrete examples.
+
+This comprehensive process enables us to obtain a Facebook/AVR at large 50 model, capable
+
+of automatically summarizing texts in English and French with optimal performance. Are ready to use model for
+
+automatic multi-lingual summarization?
+Défilement autom

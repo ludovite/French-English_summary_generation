@@ -1,0 +1,41 @@
+In this module, we will analyze the evaluation results obtained from our tech summary model, based on M. Bart 50.
+
+The goal is to understand what the metrics reveal, how to interpret them, and what improvements can be made to increase the quality
+
+and performance of the model.
+
+The loss represents the average error of the model during evaluation. The closer it is to zero, the better
+
+the model performs. In our case, we obtain a value of 1.69.
+
+This is a moderately low value, indicating that the model is on the right track. It generally understands the relationship
+
+between the original text and the expected summary, but there is still room for improvement. A loss below one would
+
+be ideal, but a value around 1.5dms2 is acceptable for generative models such this one.
+
+To measure the quality of the generated summary, we use ROGE, recall oriented under study for gisting
+
+evaluation metrics, which are a very popular in that automatic summarization tasks.
+
+Rouge-1 Jordan disperse keys, and all our 33% shows that the model managed to extract
+
+the essential key words from the text.
+
+Rouge 2 to Earth-Opx, if he cheers shares sheer 14% a slightly lower, suggesting that some sentences
+
+still lack fluency or logic in their construction.
+
+Roach, L. Garritch issued 26% indicates
+
+that the summaries produced generally respect the structure of the ideas in the source text.
+
+These scores are respectable for a first training run. A rude, one-to-jolene score of a 30% softened
+
+sufficient in real-world context to produce readable summaries.
+
+We also have metrics on model processing time and speed.
+
+This shows us that the model is functional but slow, probably because it is running on a non-optimized environment.
+
+In production or in a large-scale project, it would be appropriate to use a GPU or optimization techniques.
